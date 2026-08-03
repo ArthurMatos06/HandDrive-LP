@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand-light: var(--brand-light);
+  --color-brand-tint: var(--brand-tint);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-star: var(--star);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  color-scheme: light;
+  --radius: 0.75rem;
+
+  --background: #f6faf5;
+  --foreground: #181d1a;
+
+  --card: #ffffff;
+  --card-foreground: #181d1a;
+
+  --popover: #ffffff;
+  --popover-foreground: #181d1a;
+
+  --primary: #2a6c00;
+  --primary-foreground: #ffffff;
+
+  --secondary: #d9e9d1;
+  --secondary-foreground: #1a4900;
+
+  --muted: #ebefea;
+  --muted-foreground: #41493a;
+
+  --accent: #76bd50;
+  --accent-foreground: #082100;
+
+  --destructive: #ba1a1a;
+
+  --border: #e5ebe4;
+  --input: #e5ebe4;
+  --ring: #2a6c00;
+
+  /* Custom brand tokens */
+  --brand-light: #90d968;
+  --brand-tint: #d9e9d1;
+  --surface: #f6faf5;
+  --surface-alt: #f1f5f0;
+  --ink: #181d1a;
+  --ink-muted: #41493a;
+  --star: #ffb800;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background:
+      radial-gradient(circle at top right, rgba(118, 189, 80, 0.12), transparent 42%),
+      radial-gradient(circle at bottom left, rgba(42, 108, 0, 0.06), transparent 42%);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
