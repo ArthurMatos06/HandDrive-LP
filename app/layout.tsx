@@ -9,16 +9,33 @@ const dmSans = DM_Sans({
   variable: '--font-dm-sans',
 })
 
-export const metadata: Metadata = {
-  title: 'Hand Drive | Mobilidade com Liberdade',
-  description:
-    'Adaptações veiculares personalizadas para pessoas com deficiência ou mobilidade reduzida. Volte a dirigir com segurança, independência e liberdade.',
-  generator: 'v0.app',
-  icons: {
+export const metadata = {
+  title: "HandDrive",
+  description: "Adaptação veicular para PCD",
+
+  openGraph: {
+    title: "HandDrive",
+    description: "Adaptação veicular para PCD",
+    url: "https://handrive.com.br",
+    siteName: "HandDrive",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HandDrive",
+      },
+    ],
+    icons: {
     icon: [
       { url: '/images/logo-handdrive-2026.png', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+  },
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.jpg"],
   },
 }
 
