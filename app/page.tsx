@@ -10,6 +10,7 @@ import { Faq } from '@/components/site/faq'
 import { Cta } from '@/components/site/cta'
 import { Footer } from '@/components/site/footer'
 import { WhatsappButton } from '@/components/site/whatsapp-button'
+import { ProductsMarquee } from '@/components/site/products-marquee';
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
         <Hero />
         <Emotional />
         <Technology />
+        <ProductsMarquee />
         <About />
         <Testimonials />
         <BeforeAfter />
