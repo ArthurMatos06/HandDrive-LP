@@ -1,15 +1,26 @@
-import { BadgeCheck, MessageCircle, Star, Users, Wrench, PencilRuler, ShieldCheck } from 'lucide-react'
+import {
+  BadgeCheck,
+  MessageCircle,
+  Star,
+  Users,
+  Wrench,
+  PencilRuler,
+  ShieldCheck,
+} from "lucide-react";
 
 const badges = [
-  { icon: Users, label: 'Atendimento especializado' },
-  { icon: Wrench, label: 'Instalação profissional' },
-  { icon: PencilRuler, label: 'Projeto personalizado' },
-  { icon: ShieldCheck, label: 'Equipamentos certificados' },
-]
+  { icon: Users, label: "Atendimento especializado" },
+  { icon: Wrench, label: "Instalação profissional" },
+  { icon: PencilRuler, label: "Projeto personalizado" },
+  { icon: ShieldCheck, label: "Equipamentos certificados" },
+];
 
 export function Hero() {
   return (
-    <section id="top" className="hero-gradient relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+    <section
+      id="top"
+      className="hero-gradient relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24"
+    >
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Título e descrição */}
@@ -20,14 +31,17 @@ export function Hero() {
             </span>
 
             <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight text-ink md:text-5xl md:leading-[1.1]">
-              Volte a dirigir com{' '}
-              <span className="text-primary">segurança, independência e liberdade,</span>{' '}
+              Volte a dirigir com{" "}
+              <span className="text-primary">
+                segurança, independência e liberdade,
+              </span>{" "}
               independentemente da sua limitação.
             </h1>
 
             <p className="max-w-xl text-pretty text-base leading-relaxed text-ink-muted md:text-lg">
-              Desenvolvemos adaptações veiculares personalizadas para pessoas com deficiência ou
-              mobilidade reduzida, sempre de acordo com as suas necessidades e com total segurança.
+              Desenvolvemos adaptações veiculares personalizadas para pessoas
+              com deficiência ou mobilidade reduzida, sempre de acordo com as
+              suas necessidades e com total segurança.
             </p>
           </div>
 
@@ -50,7 +64,7 @@ export function Hero() {
           <div className="flex flex-col gap-6 lg:col-start-1 lg:row-start-2">
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
-                href="https://w.app/handrive"
+                href="https://wa.me/5511984353950?text=Gostaria%20de%20solicitar%20um%20or%C3%A7amento"
                 className="flex h-14 items-center justify-center gap-2 rounded-full border-2 border-primary bg-card px-8 font-semibold text-primary transition-colors hover:bg-secondary"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -68,7 +82,9 @@ export function Hero() {
               {badges.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex flex-col gap-2">
                   <Icon className="h-6 w-6 text-primary" />
-                  <span className="text-sm font-medium leading-tight text-ink-muted">{label}</span>
+                  <span className="text-sm font-medium leading-tight text-ink-muted">
+                    {label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -87,5 +103,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
