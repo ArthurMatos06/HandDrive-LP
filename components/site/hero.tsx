@@ -1,3 +1,4 @@
+"use client";
 import {
   BadgeCheck,
   MessageCircle,
@@ -65,6 +66,7 @@ export function Hero() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
                 href="https://wa.me/5511984353950?text=Gostaria%20de%20solicitar%20um%20or%C3%A7amento"
+                onClick={() => window.fbq?.("track", "Contact")}
                 className="flex h-14 items-center justify-center gap-2 rounded-full border-2 border-primary bg-card px-8 font-semibold text-primary transition-colors hover:bg-secondary"
               >
                 <MessageCircle className="h-5 w-5" />
