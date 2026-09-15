@@ -54,6 +54,7 @@ export default function RootLayout({
       <body>
         {children}
         <FacebookPixel />
+        <Analytics />
       </body>
     </html>
   );
