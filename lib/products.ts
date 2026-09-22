@@ -1,8 +1,8 @@
 export type Product = {
-  title: string
-  description: string
-  image: string
-}
+  title: string;
+  description: string;
+  image: string;
+};
 
 export const products: Product[] = [
   {
@@ -90,4 +90,4 @@ export const products: Product[] = [
     description: "Transferência segura e confortável para o condutor",
     image: "/produtos/banco-transferencia.jpg",
   },
-]
+];
